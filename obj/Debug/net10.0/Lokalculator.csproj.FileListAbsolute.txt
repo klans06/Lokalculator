@@ -12,3 +12,4 @@
 /Users/kieranlane/RiderProjects/Lokalculator/Lokalculator/obj/Debug/net10.0/Lokalculator.pdb
 /Users/kieranlane/RiderProjects/Lokalculator/Lokalculator/obj/Debug/net10.0/Lokalculator.genruntimeconfig.cache
 /Users/kieranlane/RiderProjects/Lokalculator/Lokalculator/obj/Debug/net10.0/ref/Lokalculator.dll
+/Users/kieranlane/RiderProjects/Lokalculator/Lokalculator/obj/Debug/net10.0/Lokalculator.sourcelink.json

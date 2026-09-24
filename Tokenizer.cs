@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace Lokalculator;
 
-public class Tokenizer
+public partial class Tokenizer
 {
     private List<string> Tokens = [];
     
@@ -19,38 +19,35 @@ public class Tokenizer
         return equation;
     }
     
+    [GeneratedRegex(@"\d+(\.\d+)?|[+\-*/()]", RegexOptions.IgnoreCase, "en-US")]
+    private static partial Regex MatchEquationToken();
+    
     public List<string> TokenizeString(string sourceString)
     {
-        foreach (Match m in Regex.Matches(sourceString, @"\d+(\.\d+)?|[+\-*/()]"))
+        foreach (var match in MatchEquationToken().Matches(sourceString))
         {
-            if (CheckToken(m.ToString()))
-            {
-                Tokens.Add(m.ToString());
-            } else
-            {
-                Console.WriteLine($"{m.ToString()} is not an operator or number. Please fix equation.");
-                return null;
-            }
+            var token = match.ToString();
+            Tokens.Add(token);
         }
 
         return Tokens;
     }
     
-    private bool CheckToken(string token)
-    {
-        if (double.TryParse(token, out _))
-        {
-            return true;
-        } else if (OperatorRegistry.Operators.ContainsKey(token))
-        {
-            return true;
-        } else if (token is "(" or ")")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    // private bool CheckToken(string token)
+    // {
+    //     if (double.TryParse(token, out _))
+    //     {
+    //         return true;
+    //     } else if (OperatorRegistry.Operators.ContainsKey(token))
+    //     {
+    //         return true;
+    //     } else if (token is "(" or ")")
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
 }
