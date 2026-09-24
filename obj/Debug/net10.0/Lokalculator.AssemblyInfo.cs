@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lokalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1b39e916ba34b0c4d79d1cb4ef5ec24bc4fb1c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26f8cb21ffb596441dea33704d34a53504a50cf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lokalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lokalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

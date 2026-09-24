@@ -33,22 +33,4 @@ public partial class Tokenizer
 
         return Tokens;
     }
-    
-    // private bool CheckToken(string token)
-    // {
-    //     if (double.TryParse(token, out _))
-    //     {
-    //         return true;
-    //     } else if (OperatorRegistry.Operators.ContainsKey(token))
-    //     {
-    //         return true;
-    //     } else if (token is "(" or ")")
-    //     {
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
-    // }
 }
