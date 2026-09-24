@@ -2,7 +2,7 @@ namespace Lokalculator;
 
 public class Postfix
 {
-    public List<string> Sort(List<string> tokens)
+    public static List<string> Sort(List<string> tokens)
     {
         Stack<string> operatorStack = [];
         List<string> outputQueue = [];

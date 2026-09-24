@@ -2,7 +2,7 @@ namespace Lokalculator;
 
 public class Calculate
 {
-    public double PerformCalculation(List<string> infixEquation)
+    public static double PerformCalculation(List<string> infixEquation)
     {
         Stack<double> result = [];
 
