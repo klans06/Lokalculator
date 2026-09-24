@@ -1,5 +1,5 @@
-[Oo]bj/
-[Bb]in/
+obj
+bin
 .nuget/
 _ReSharper.*
 packages/
