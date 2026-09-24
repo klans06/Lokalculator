@@ -4,9 +4,8 @@ namespace Lokalculator;
 
 public partial class Tokenizer
 {
-    private List<string> Tokens = [];
     
-    public string FetchEquation()
+    public static string FetchEquation()
     {
         Console.WriteLine("Enter your equation:");
         string equation = Console.ReadLine();
@@ -22,8 +21,10 @@ public partial class Tokenizer
     [GeneratedRegex(@"\d+(\.\d+)?|[+\-*/()]", RegexOptions.IgnoreCase, "en-US")]
     private static partial Regex MatchEquationToken();
     
-    public List<string> TokenizeString(string sourceString)
+    public static List<string> TokenizeString(string sourceString)
     {
+        List<string> Tokens = [];
+        
         foreach (var match in MatchEquationToken().Matches(sourceString))
         {
             var token = match.ToString();
